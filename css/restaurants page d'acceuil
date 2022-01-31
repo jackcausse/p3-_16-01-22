@@ -19,8 +19,6 @@ Logo et titres: Shrikhand
 Texte: Roboto*/
 
 /*header*/
-
-
 header .header a img {
 	width: 100%;
 	height: 30px;
