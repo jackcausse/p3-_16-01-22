@@ -1,11 +1,12 @@
 /*body*/
 body {
+	margin: 0;
 	font-family: roboto;
 }
 
 #bloc_page {
 	width: auto;
-	margin: none;
+	margin: 0;
 }
 
 /*images*/
@@ -23,6 +24,8 @@ header .header a img {
 	height: 30px;
 	margin-top: 1rem;
 	margin-bottom: 0.5rem;
+	font-size: 0px;
+	padding: 0.2rem;
 }
 
 /*section*/
@@ -36,58 +39,74 @@ header .header a img {
 	align-items: center;
 	align-content: center;
 	justify-content: center;
-	background-color: rgb(218, 218, 218);
-	gap: 1.4rem;
-	margin: none;
+	background-color: rgb(233, 231, 231);
+	gap: 1rem;
 	font-size: 1.2rem;
 	font-weight: bold;
 	box-shadow: 0 -1px 0 0;
 }
 
 .menu .point i {
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.4rem;
+	font-size: 16px;
 }
-
-/*font-family:Shrikhand ;*/
 
 .menu .point p {
 	text-align: center;
-	font-size: 18px;
-	margin-bottom: 3px;
+	font-size: 16px;
+	font-weight: 500;
 }
 
-.menu form button {
-	padding: 1rem;
-	border-radius: 2.5rem;
-	color: white;
-	background-color: #ff79da;
+.menu p {
 	text-align: center;
-	border: none;
-	cursor: pointer;
-	margin: 2rem 0rem 3.5rem 4rem;
-	font-size: 18px;
-	font-weight: 400px;
 }
 
+.menu .reservez {
+	font-size: 25px;
+	font-weight: 900;
+}
+
+.menu .decouvrez {
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.menu form button { 
+	padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+	border-radius: 2.5rem;
+	margin: 0.8rem 0.5rem 3.5rem 5rem;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+	transition: 0.2s ease-in-out;
+	box-shadow: 0px 5px 10px 0px rgb(0, 0, 0/ 30%);
+}
+/*section*/
 /*fonctionnement*/
 .fonctionnement {
 	justify-content: center;
 	align-items: center;
-	color: #fff;
 }
 
 .fonctionnement p {
-	margin-left: 0.2rem;
+	margin-left: 1rem;
+	color: black;
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 .fonctionnement .ol li {
-	padding: 1.8rem;
+	border-color: none;
 	border-radius: 1.5rem;
-	background-color: rgb(235, 231, 231);
-	color: #9356dc;
+	background-color: rgb(243, 240, 240);
+	color: #45098f;
 	margin-top: 1rem;
 	font-size: 20px;
 	box-shadow: 4px 4px 4px -6px;
+	cursor: pointer;
 }
 
 .fonctionnement .ol ol {
@@ -104,104 +123,144 @@ header .header a img {
 
 .fonctionnement li {
 	font-size: 1.5rem;
-	padding: 2rem;
+	padding: 1.5rem;
 	list-style-type: none;
 	counter-increment: restaus;
+	position: relative;
+	margin: 2rem;
+	margin-left: 2rem;
 }
 
 .fonctionnement li:before {
 	content: counter(restaus);
-	padding: 15px;
-	background: #9356dc;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #692eb1;
 	border-radius: 50%;
 	font-weight: 20px;
-	font-size: 20px;
-	color: #fff;
+	font-size: 0.9rem;
+	color: rgb(255, 254, 254);
 	position: absolute;
-	left: 1rem;
-	bottom: 0rem;
+	left: -0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .fonctionnement li i {
 	font-size: 1rem;
+	margin-left: 1.5rem;
+	margin-bottom: 0;
 }
-
+/*section*/
 /*restaurants*/
 .restaurants {
-	grid-gap: 30px;
 	padding-top: 2rem;
-	background-color: #fff;
-	
+	background-color: rgb(238, 235, 235);
 }
 
+.restaurants .rest {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-left: 1rem;
+}
 .restaurants .vignettes {
 	display: grid;
-	grid-gap: 30px;
-	background-color: rgb(226, 218, 218);
+	grid-template-columns: repeat(1, 1fr);
+	column-gap: rem;
+	row-gap: rem;
+	margin: 0 1rem 0 1rem;
 }
+
 
 .restaurants .vignettes .vignette img {
-	border-radius: 1.5rem 1.5rem 0 0;width: 100%;
-	height: 70%;
+	border-radius: 1.5rem 1.5rem 0 0;
+	width: 100%;
+	height: 190px;
 	object-fit: cover;
-
 }
-
-.restaurants .vignettes .vignette .palette,
-.note,
-.francaise,
-.delice {
-	
-	/*border-radius: 2rem 2rem;*/
-}
-
-
 
 .vignettes .vignette {
 	border-radius: 1.5rem;
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 	box-shadow: 4px 4px 4px -6px;
 	width: 100%;
 	margin-bottom: 4rem;
-	height: 75%;
+	height: 280px;
 	position: relative;
+	cursor: pointer;
 }
 
 .vignette .nouveau {
-	/*display: flex;*/
 	padding: 0.5rem;
 	border-radius: 5px;
-	background-color: aquamarine;
+	background-color: #99E2D0;
+	color: #075a47;
 	position: absolute;
 	right: 1.5em;
-	top: 1em;
+	top: 1rem;
 }
 
+.vignette .mark {
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin: 0 0 0.5rem;
+	margin: 1rem 0 0 1rem;
+}
+
+.vignette P {
+	font-size: 1.1rem;
+	font-weight: 300;
+	margin: 0.5rem 0 0 1rem;
+}
+
+.restaurants h3 {
+font-size: 1.5rem;
+margin-left: 1rem;
+}
+
+.vignette .heart {
+	font-size: 1.5rem;
+	position: absolute;
+	right: 2rem;
+	bottom: 2.5rem;
+	
+}
+/*section restaurants*/
+/*footer*/
 footer {
-	margin: 0;
-	display: flex;
-	background-color: rgb(58, 57, 57);
-}
-
-footer ul {
+background-color: rgb(58, 57, 57);
+padding-bottom: 1rem;
+padding-top: 0.5rem;
+}	
+	
+footer .footer ul {
 	list-style-type: none;
 }
 
-footer h1 {
+footer .footer h1 {
 	font-weight: Shrikhand;
 	font-size: 20px;
 	color: #ffff;
-	padding-right: 55px;
+	margin-left: 1rem;
 }
 
-footer ul li a {
+.footer ul li a {
 	color: white;
-	margin-left: 2px;
+	margin: 0px;
 	text-decoration: none;
+	font-weight: 400;
+	list-style-type: none;
+	line-height: 25px;
 }
 
-footer ul li i {
-	padding: 2px;
+footer ul li .fine {
+	font-weight: 100;
+}
+
+.footer ul li i {
 	color: #ffff;
 	margin-right: 8px;
+	font-size: 12px;
 }
+
