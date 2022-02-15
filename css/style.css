@@ -19,63 +19,66 @@ Logo et titres: Shrikhand
 Texte: Roboto*/
 
 /*header*/
-
-
 header .header a img {
 	width: 100%;
 	height: 30px;
-	margin-top: 1rem;
+	margin-top: 1.4rem;
 	margin-bottom: 0.5rem;
-	font-size: 0px;
-	padding: 0.2rem;
+	cursor: pointer;
 }
 
-/*section*/
-/*menu*/
+/*section menu*/
 .menu {
 	background-color: rgb(243, 240, 240);
 }
 
-.menu .point {
+.menu .map {
 	display: flex;
 	align-items: center;
 	align-content: center;
 	justify-content: center;
 	background-color: rgb(233, 231, 231);
-	gap: 1rem;
+	gap: 1.1rem;
 	font-size: 1.2rem;
 	font-weight: bold;
-	box-shadow: 0 -1px 0 0;
+	box-shadow: 0 -1px 3px 0 #928e8e;
 }
 
-.menu .point i {
-	margin-bottom: 0.4rem;
+.menu .map i {
+	margin-bottom: 0.3rem;
 	font-size: 16px;
 }
 
-.menu .point p {
+.menu .map p {
 	text-align: center;
 	font-size: 16px;
 	font-weight: 500;
+	margin-right: 2.2rem;
 }
 
-.menu p {
+.menu h2,
+p {
 	text-align: center;
 }
 
 .menu .reservez {
 	font-size: 25px;
 	font-weight: 900;
+	margin-right: 1.2rem;
+	line-height: 1.7rem;
+	margin-top: 2.4rem;
 }
 
 .menu .decouvrez {
 	font-size: 18px;
-	font-weight: 300;
+	font-weight: 100;
+	margin: -0.5rem 0 1rem 0;
 }
 
-.menu form button { 
-	padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+.menu form button {
+	padding: 1.1rem 1.5rem 1.1rem 1.5rem;
 	border-radius: 2.5rem;
+	border: none;
 	margin: 0.8rem 0.5rem 3.5rem 5rem;
 	font-size: 14px;
 	font-weight: bold;
@@ -83,82 +86,97 @@ header .header a img {
 	text-align: center;
 	color: white;
 	background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
-	transition: 0.2s ease-in-out;
-	box-shadow: 0px 5px 10px 0px rgb(0, 0, 0/ 30%);
+	box-shadow: 0 5px 10px 0 rgba(70, 52, 52, 0.4);
+	transition: 0s ease-in-out;
 }
-/*section*/
-/*fonctionnement*/
+
+.menu form button:hover {
+	background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
+}
+
+/*section fonctionnement */
 .fonctionnement {
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 3rem;
 }
 
-.fonctionnement p {
+.fonctionnement h2 {
 	margin-left: 1rem;
 	color: black;
 	font-size: 1.5rem;
 	font-weight: bold;
+	margin-top: 2.8rem;
+	margin-bottom: -1.4rem;
 }
 
-.fonctionnement .ol li {
-	border-color: none;
+.fonctionnement .ol .icon {
 	border-radius: 1.5rem;
 	background-color: rgb(243, 240, 240);
-	color: #45098f;
-	margin-top: 1rem;
 	font-size: 20px;
-	box-shadow: 4px 4px 4px -6px;
+	box-shadow: 0px 5px 5px -6px;
 	cursor: pointer;
+	margin-left: 1.5rem;
 }
 
 .fonctionnement .ol ol {
 	counter-reset: restaus;
+	padding: 0.2rem;
+}
+
+.fonctionnement .ol .icon:hover {
+	background-color: #e4d9f1;
+	box-shadow: 0px 5px 10px 0px rgba(70, 52, 52, 0.4);
+}
+
+.fonctionnement .icon i {
+	font-size: 1rem;
+	margin-left: 1rem;
+	color: #817b7b;
+}
+
+.fonctionnement .ol .icon i:hover {
+	color: #9356dc;
 }
 
 .fonctionnement .ol .icon .text {
 	margin: 1rem;
 	text-decoration: none;
 	font-size: 1rem;
-	font-weight: bold;
+	font-weight: 500;
 	color: #000000;
 }
 
-.fonctionnement li {
+.fonctionnement .icon {
 	font-size: 1.5rem;
-	padding: 1.5rem;
+	padding: 1.6rem;
 	list-style-type: none;
 	counter-increment: restaus;
 	position: relative;
-	margin: 2rem;
-	margin-left: 2rem;
+	margin: 1.5rem;
+	margin-left: 2.5rem;
 }
 
-.fonctionnement li:before {
+.fonctionnement .icon:before {
 	content: counter(restaus);
 	width: 1.5rem;
 	height: 1.5rem;
-	background: #692eb1;
+	background-color: #9356dc;
 	border-radius: 50%;
 	font-weight: 20px;
 	font-size: 0.9rem;
-	color: rgb(255, 254, 254);
+	color: #fff;
 	position: absolute;
-	left: -0.5rem;
+	left: -0.7rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.fonctionnement li i {
-	font-size: 1rem;
-	margin-left: 1.5rem;
-	margin-bottom: 0;
-}
-/*section*/
-/*restaurants*/
+/*section restaurants*/
 .restaurants {
-	padding-top: 2rem;
-	background-color: rgb(238, 235, 235);
+	background-color: rgb(243, 240, 240);
+	padding-bottom: 4rem;
 }
 
 .restaurants .rest {
@@ -169,11 +187,10 @@ header .header a img {
 .restaurants .vignettes {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	column-gap: rem;
-	row-gap: rem;
+	column-gap: 1rem;
+	row-gap: 1rem;
 	margin: 0 1rem 0 1rem;
 }
-
 
 .restaurants .vignettes .vignette img {
 	border-radius: 1.5rem 1.5rem 0 0;
@@ -183,24 +200,27 @@ header .header a img {
 }
 
 .vignettes .vignette {
-	border-radius: 1.5rem;
+	border-radius: 1rem;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 4px 4px 4px -6px;
 	width: 100%;
 	margin-bottom: 4rem;
-	height: 280px;
+	height: 270px;
 	position: relative;
 	cursor: pointer;
+	margin-bottom: -0.1rem;
 }
 
 .vignette .nouveau {
-	padding: 0.5rem;
-	border-radius: 5px;
-	background-color: #99E2D0;
-	color: #075a47;
+	padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+	border-radius: 2px;
+	background-color: #99e2d0;
+	color: #0c8166;
 	position: absolute;
-	right: 1.5em;
+	right: 1.2rem;
 	top: 1rem;
+	font-size: 0.9rem;
+	font-weight: 500;
 }
 
 .vignette .mark {
@@ -214,55 +234,66 @@ header .header a img {
 	font-size: 1.1rem;
 	font-weight: 300;
 	margin: 0.5rem 0 0 1rem;
+	text-align: start;
+	line-height: 1rem;
 }
 
 .restaurants h3 {
-font-size: 1.5rem;
-margin-left: 1rem;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+	margin-top: rem;
+	padding-top: 3rem;
 }
 
 .vignette .heart {
 	font-size: 1.5rem;
 	position: absolute;
 	right: 2rem;
-	bottom: 2.5rem;
-	
+	bottom: 2rem;
 }
-/*section restaurants*/
+
+.vignette .heart:hover {
+	background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+}
+
 /*footer*/
 footer {
-background-color: rgb(58, 57, 57);
-padding-bottom: 1rem;
-padding-top: 0.5rem;
-}	
-	
+	background-color: rgb(58, 57, 57);
+	padding-top: 0.5rem;
+	padding-bottom: 1rem;
+}
+
 footer .footer ul {
 	list-style-type: none;
+	padding: 0;
+	margin: 1rem;
 }
 
 footer .footer h1 {
-	font-weight: Shrikhand;
-	font-size: 20px;
-	color: #ffff;
+	font-family: "Shrikhand", cursive;
+	font-size: 18px;
+	font-weight: 100;
+	color: #fff;
 	margin-left: 1rem;
 }
 
 .footer ul li a {
-	color: white;
-	margin: 0px;
+	color: #fff;
 	text-decoration: none;
 	font-weight: 400;
-	list-style-type: none;
-	line-height: 25px;
+	line-height: 1.7rem;
 }
 
 footer ul li .fine {
-	font-weight: 100;
+	font-weight: 300;
+}
+
+footer ul li .cherche {
+	font-weight: 400;
 }
 
 .footer ul li i {
-	color: #ffff;
+	color: #fff;
 	margin-right: 8px;
 	font-size: 12px;
 }
-
