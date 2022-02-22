@@ -23,11 +23,14 @@
 		/>
 
 		<title>Réserver le menu qui vous convient</title>
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/styles.min.css" />
 	</head>
 	<!--/head-->
 	<!--body-->
 	<body>
+
+<div class="chargement"></div>
+
 		<!--header-->
 		<header>
 			<div class="header">
@@ -52,12 +55,11 @@
 					<p class="decouvrez">
 						Découvrez des restaurants d'exceptions,<br />sélectionnés par nos
 						soins.
-					</p>					
+					</p>
 
 					<form>
 						<button><span>Explorer nos restaurants</span></button>
 					</form>
-
 				</section>
 				<!--/section menu-->
 				<!--section fonctionnement-->
@@ -82,12 +84,14 @@
 					</div>
 				</section>
 				<!--/section fonctionnement-->
+
 				<!--section restaurant-->
 				<section class="restaurants">
 					<h3>Restaurants</h3>
 
 					<!--conteneur des vignettes-->
 					<div class="vignettes">
+
 						<!--vignette produit-->
 						<div class="vignette">
 							<a href="indexpalette"
@@ -99,11 +103,7 @@
 							<div class="nouveau">Nouveau</div>
 							<p class="mark">La palette du goût</p>
 							<p>Menilmontant</p>
-							<span class="heart"
-								><i class="far fa-heart" aria-hidden="true"></i
-							></span>
-							
-						</div>
+						<span class="heart"><i class="far fa-heart"></i></span>
 
 						<!--vignette produit -->
 						<div class="vignette">
@@ -114,16 +114,11 @@
 									alt="assiette vue de haut"
 							/></a>
 							<div class="nouveau">Nouveau</div>
-							<p class="mark">La note enchantée</p>
-							<label class="=checkbox heart">
-								<input type="checkbox">
-							<span class="heart"
-								><i class="far fa-heart unchecked" aria-hidden="true"></i
-							></span>
-							<span class="fas fa-heart checked" aria-hidden="true"></span>
-						</label>
+							<p class="mark">La note enchantée</p>							
+								<span class="heart"><i class="far fa-heart"></i></span>
 							<p>Charonne</p>
 						</div>
+
 						<!--vignette produit-->
 						<div class="vignette">
 							<a ref=""
@@ -133,15 +128,10 @@
 									alt="assiette gourmande"
 							/></a>
 							<p class="mark">À la française</p>
-							<label class="=checkbox heart">
-								<input type="checkbox">
-							<span class="heart"
-								><i class="far fa-heart unchecked" aria-hidden="true"></i
-							></span>
-							<span class="fas fa-heart checked" aria-hidden="true"></span>
-						</label>
+							<span class="heart"><i class="far fa-heart"></i></span>
 							<p>Cité rouge</p>
 						</div>
+
 						<!--vignette produit-->
 						<div class="vignette">
 							<a href="#"
@@ -151,13 +141,7 @@
 									alt="assiette longue"
 							/></a>
 							<p class="mark">Le délice des sens</p>
-							<label class="=checkbox heart">
-								<input type="checkbox">
-							<span class="heart"
-								><i class="far fa-heart unchecked" aria-hidden="true"></i
-							></span>
-							<span class="fas fa-heart checked" aria-hidden="true"></span>
-						</label>
+							<span class="heart"><i class="far fa-heart"></i></span>						
 							<p>Folie-Méricourt</p>
 						</div>
 					</div>
@@ -171,11 +155,11 @@
 					<h1>ohmyfood</h1>
 					<ul>
 						<li>
-							<i class="fas fa-utensils" aria-hidden="true"></i
+							<i class="fas fa-utensils"></i
 							><a href="#" class="cherche">Proposer un restaurant</a>
 						</li>
 						<li>
-							<i class="fas fa-hands-helping" aria-hidden="true"></i
+							<i class="fas fa-hands-helping"></i
 							><a href="#" class="cherche">Devenir partenaire</a>
 						</li>
 						<li><a href="#" class="cherche">Mentions légales</a></li>

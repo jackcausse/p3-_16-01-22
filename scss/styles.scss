@@ -4,6 +4,48 @@ body {
 	font-family: roboto;
 }
 
+.chargement {
+	/*Céation du loader*/
+	border-top: 10px solid #ff79da;
+	border-right: 10px solid #99e2d0;
+	border-bottom: 10px solid #da1de0;
+	border-left: 10px solid #9356dc;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	/*-webkit-animation: spin 3s linear infinite;*/
+	//<-0-animation: spin 3s linear infinite;
+	//animation: spin 1.2s //linear //infinite;
+
+	/*placement du loader au milieu de la page*/
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	//transition-duration: 600ms;
+	//transition: transform 0.4s;
+}
+/*animation du loader*/
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 #bloc_page {
 	width: auto;
 	margin: 0;
@@ -13,7 +55,7 @@ body {
 img {
 	max-width: 100%;
 }
-/*color:primaire #9356DC, secondaire #FF79DA, tertiaire #99E2D0;
+/*color:primaire #9356DC, secondaire  , tertiaire #99E2D0;
 Polices
 Logo et titres: Shrikhand
 Texte: Roboto*/
@@ -47,6 +89,7 @@ header .header a img {
 .menu .map i {
 	margin-bottom: 0.3rem;
 	font-size: 16px;
+	cursor: pointer;
 }
 
 .menu .map p {
@@ -87,7 +130,6 @@ p {
 	color: white;
 	background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
 	box-shadow: 0 5px 10px 0 rgba(70, 52, 52, 0.4);
-	transition: 0s ease-in-out;
 }
 
 .menu form button:hover {
@@ -124,7 +166,7 @@ p {
 	padding: 0.2rem;
 }
 
-.fonctionnement .ol .icon:hover {
+.fonctionnement .ol ol .icon:hover {
 	background-color: #e4d9f1;
 	box-shadow: 0px 5px 10px 0px rgba(70, 52, 52, 0.4);
 }
@@ -184,6 +226,7 @@ p {
 	font-weight: bold;
 	margin-left: 1rem;
 }
+
 .restaurants .vignettes {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -243,17 +286,6 @@ p {
 	margin-left: 1rem;
 	margin-top: rem;
 	padding-top: 3rem;
-}
-
-.vignette .heart {
-	font-size: 1.5rem;
-	position: absolute;
-	right: 2rem;
-	bottom: 2rem;
-}
-
-.vignette .heart:hover {
-	background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
 }
 
 /*footer*/

@@ -1,0 +1,296 @@
+//variables
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$gradient: linear-gradient (162deg, #ff79da 0%, #9356dc 100%);
+$background-color: #fff;
+//background-color: rgb(243, 241, 241);
+//Polices
+$Logo_et_titres: Shrikhand;
+$Texte: Roboto;
+//@mixins
+@mixin border-radius($radius) {
+	border-radius: $radius(1.5rem);
+}
+//@include border-radius(1.5rem);
+
+/*body*/
+
+body {
+	margin: 0;
+	font-family: roboto;
+}
+
+#bloc_page {
+	width: auto;
+	margin: 0;
+}
+
+/*color:primaire #9356DC, secondaire #FF79DA, tertiaire #99E2D0;
+Polices
+Logo et titres: Shrikhand
+Texte: Roboto*/
+
+/*header*/
+img {
+	max-width: 100%;
+}
+
+header {
+	position: relative;
+	margin-top: 1.5rem;
+	margin-bottom: 0.5rem;
+	margin-left: 2px;
+}
+
+header a i {
+	font-size: 1.2rem;
+	color: black;
+	top: 0.3rem;
+	left: 1.7rem;
+	font-weight: bold;
+	position: absolute;
+}
+
+header a img {
+	width: 100%;
+	height: 30px;
+}
+
+/*main*/
+main {
+	background-color: rgb(243, 241, 241);
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+/*vignette en tête*/
+.vignette {
+	position: relative;
+}
+
+.vignette .photo_restau {
+	margin-bottom: 2.6rem;
+	object-fit: cover;
+}
+
+.vignette .h2 h2 {
+	font-size: 1.8rem;
+	font-family: "Shrikhand", cursive;
+	font-weight: 100;
+	align-items: center;
+	margin-bottom: 0rem;
+}
+
+.vignette .h2 {
+	display: flex;
+	align-items: center;
+	background-color: rgb(243, 241, 241);
+	position: absolute;
+	width: 100%;
+	justify-content: space-around;
+	bottom: 0.025rem;
+	border-radius: 2.5rem 2.5rem 0 0;
+	align-items: center;
+}
+
+.heart i {
+	font-size: 1.5rem;
+	position: absolute;
+	right: 2rem;
+	bottom: 2rem;
+	background-color: transparent;
+	transition: color 300ms ease-in;
+
+	&:hover {
+		font-weight: bold;
+		background-image: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+		color: transparent;
+		-webkit-background-clip: text;
+	}
+}
+
+/*entrées*/
+h3 {
+	font-size: 1rem;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+}
+
+.entrees {
+	display: grid;
+	grid-gap: 1rem;
+	margin: 1rem 1rem 1rem 1rem;
+	align-items: flex-end;
+}
+
+.plats,
+.entrees,
+.desserts {
+	display: grid;
+	grid-gap: 1rem;
+	margin: 1rem 1rem 1rem 1rem;
+}
+
+.entrees .bouton_choix,
+.plats .bouton_choix,
+.desserts .bouton_choix {
+	background-color: #fff;
+	border-radius: 1rem;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	font-size: 20px;
+	box-shadow: 0px 5px 8px -8px;
+	height: 70px;
+	cursor: pointer;
+	&:hover {
+		//background:  #f2e6ff;
+		box-shadow: 0 5px 10px 0 rgba(70, 52, 52, 0.4);
+	}
+}
+
+.entrees .titre_underline,
+.plats .titre_underline,
+.desserts .titre_underline {
+	border-bottom: 3px solid #99e2d0;
+	padding-bottom: 5px;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+}
+
+.plats,
+.entrees,
+.desserts {
+	display: grid;
+	grid-gap: 1rem;
+	margin: 1rem 1rem 1rem 1rem;
+}
+
+.entrees,
+.plats,
+.desserts,
+.titre {
+	color: rgb(14, 13, 13);
+}
+
+main .bouton_choix .plat {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-left: 1rem;
+}
+
+main .bouton_choix .duo {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+main .bouton_choix .pri .prix {
+	font-size: 1rem;
+	font-weight: bold;
+	align-items: flex-end;
+	justify-content: flex-end;
+	align-self: end;
+}
+
+.check i {
+	color: #fff;
+}
+
+.check {
+	visibility: hidden;
+	width: 0;
+	//all
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70px;
+	color: #fff;
+	border-radius: 0 1rem 1rem 0;
+	background-color: #99e2d0;
+	padding: 0rem 1.5rem 0 1.5rem;
+}
+
+.check:hover {
+	content: "";
+	height: 70px;
+	width: 70%;
+	transform: rotate(360deg);
+	transform-origin: left;
+	transition: transform 0.4s;
+	transition-duration: 60ms;
+	transform: scale(0);
+}
+
+/*section command*/
+main form button {
+	padding: 1.1rem 3.5rem 1.1rem 3.5rem;
+	border-radius: 2.5rem;
+	border: none;
+	margin: 0.8rem 6rem 3.5rem 6rem;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+	text-align: center;
+	align-items: center;
+	color: white;
+	background: $gradient;
+	box-shadow: 0 5px 10px 0 rgba(70, 52, 52, 0.4);
+
+	&:hover {
+		background: linear-gradient (162deg, #ff79da 0%, #9356dc 100%);
+	}
+}
+
+/*footer*/
+footer {
+	background-color: rgb(58, 57, 57);
+	padding-top: 0.5rem;
+	padding-bottom: 1rem;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin-left: 1rem;
+}
+
+footer h1 {
+	font-family: "Shrikhand", cursive;
+	font-size: 18px;
+	font-weight: 100;
+	color: #fff;
+	margin-left: 1rem;
+	margin-top: 1rem;
+}
+
+footer ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+	line-height: 1.7rem;
+}
+
+footer ul li a .contact {
+	line-height: none;
+}
+
+footer ul li .fine {
+	font-weight: 300;
+}
+
+footer ul li .cherche {
+	font-weight: 400;
+}
+
+footer ul li i {
+	color: #fff;
+	margin-right: 8px;
+	font-size: 12px;
+}

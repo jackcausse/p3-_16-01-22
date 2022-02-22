@@ -1,0 +1,312 @@
+//body
+body {
+	margin: 0;
+	font-family: roboto;
+
+	#bloc_page {
+		width: auto;
+		margin: 0;
+		//img
+		img {
+			max-width: 100%;
+		}
+
+		//variables
+		$primary: #9356dc;
+		$secondary: #ff79da;
+		$tertiary: #99e2d0;
+		$gradient: linear-gradient (162deg, #ff79da 0%, #9356dc 100%);
+		$background-color: #fff;
+		background-color: rgb(243, 241, 241);
+		//Polices
+		$Logo_et_titres: Shrikhand;
+		$Texte: Roboto;
+		//@mixins
+		@mixin border-radius($radius) {
+			border-radius: $radius(1.5rem);
+		}
+		//@include border-radius(1.5rem);
+
+		//typographie
+		h3 {
+			font-size: 1rem;
+			font-weight: 400;
+			padding: 0;
+			margin: 0;
+		}
+
+		.vignette .h2 h2 {
+			font-size: 1.8rem;
+			font-family: "Shrikhand", cursive;
+			font-weight: 100;
+			align-items: center;
+			margin-bottom: 0rem;
+		}
+
+		//code css
+		
+		//header
+		header {
+			position: relative;
+			margin-top: 1.5rem;
+			margin-bottom: 0.5rem;
+			margin-left: 20px;
+
+			i {
+				font-size: 1.2rem;
+				color: black;
+				top: 0.3rem;
+				left: 1.7rem;
+				font-weight: bold;
+				position: absolute;
+			}
+
+			header a img {
+				width: 100%;
+				height: 30px;
+			}
+		}
+		//main
+		main {
+			background-color: rgb(243, 241, 241);
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+
+			//vignette en tête
+			.vignette {
+				position: relative;
+			}
+
+			.vignette .photo_restau {
+				margin-bottom: 2.6rem;
+				object-fit: cover;
+				height: 1%;
+				width: 2%;
+			}
+
+			.vignette .h2 {
+				display: flex;
+				align-items: center;
+				background-color: rgb(243, 241, 241);
+				position: absolute;
+				width: 100%;
+				justify-content: space-around;
+				bottom: 0.025rem;
+				border-radius: 2.5rem 2.5rem 0 0;
+				align-items: center;
+			}
+
+			.vignette .h2 .heart {
+				font-size: 1.5rem;
+				justify-content: space-around;
+				cursor: pointer;
+
+				.heart:hover {
+					background: linear-gradient(to bottom, $secondary, $primary);
+				}
+			}
+			//@include border-radius(1.5rem);
+
+			/*main*/
+			main {
+				background-color: rgb(243, 241, 241);
+				display: flex;
+				flex-direction: column;
+				margin: 0;
+				padding: 0;
+			}
+			/*vignette en tête*/
+			.vignette {
+				position: relative;
+			}
+
+			.vignette .photo_restau {
+				margin-bottom: 2.6rem;
+				object-fit: cover;
+			}
+			footer h1 {
+				font-family: "Shrikhand", cursive;
+				font-size: 18px;
+				font-weight: 100;
+				color: #fff;
+				margin-left: 1rem;
+				margin-top: 1rem;
+			}
+
+			.vignette .h2 {
+				display: flex;
+				align-items: center;
+				background-color: rgb(243, 241, 241);
+				position: absolute;
+				width: 100%;
+				justify-content: space-around;
+				bottom: 0.025rem;
+				border-radius: 2.5rem 2.5rem 0 0;
+				align-items: center;
+			}
+
+			.vignette .h2 .heart {
+				font-size: 1.5rem;
+				justify-content: space-around;
+				cursor: pointer;
+
+				.heart:hover {
+					background: linear-gradient(to bottom, $primary, $secondary);
+				}
+			}
+			/*entrées*/
+
+			main.entrees {
+				display: grid;
+				grid-gap: 1rem;
+				margin: 1rem 1rem 1rem 1rem;
+				align-items: flex-end;
+			}
+
+			main.plats,
+			.entrees,
+			.desserts {
+				display: grid;
+				grid-gap: 1rem;
+				margin: 1rem 1rem 1rem 1rem;
+				align-items: flex-end;
+			}
+
+			main .entrees .bouton_choix .plats .bouton_choix,
+			.desserts .bouton_choix {
+				background-color: #fff;
+				border-radius: 1rem;
+				display: flex;
+				align-items: flex-end;
+				justify-content: space-between;
+				cursor: pointer;
+			}
+
+			.entrees .titre_underline,
+			.plats .titre_underline,
+			.desserts .titre_underline {
+				border-bottom: 3px solid $tertiary;
+				padding-bottom: 5px;
+			}
+
+			.menu {
+				display: flex;
+				align-items: center;
+			}
+			.entrees,
+			.plats,
+			.desserts {
+				display: grid;
+				grid-gap: 1rem;
+				margin: 1rem 1rem 1rem 1rem;
+			}
+
+			.entrees,
+			.plats,
+			.desserts,
+			.titre {
+				color: rgb(14, 13, 13);
+			}
+
+			main .bouton_choix .plat {
+				font-size: 1.2rem;
+				font-weight: 700;
+				margin-left: 1rem;
+			}
+
+			main .bouton_choix .duo {
+				font-size: 1rem;
+				font-weight: 400;
+			}
+
+			main .bouton_choix .prix {
+				font-size: 1rem;
+				font-weight: bold;
+				align-items: flex-end;
+				justify-content: flex-end;
+				align-self: end;
+			}
+
+			.checkbox {
+				width: 0;
+				overflow: hidden;
+			}
+
+			.check {
+				width: 0;
+				overflow: hidden;
+				text-align: center;
+				background: #99e2d0;
+				width: 0;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-transition: width 1s;
+				-o-transition: width 1s;
+				transition: width 1s;
+				padding-top: 25px;
+			}
+
+			/*section command*/
+			main form button {
+				padding: 1.1rem 3.5rem 1.1rem 3.5rem;
+				border-radius: 2.5rem;
+				border: none;
+				margin: 0.8rem 6rem 3.5rem 6rem;
+				font-size: 14px;
+				font-weight: 700;
+				cursor: pointer;
+				text-align: center;
+				align-items: center;
+				color: white;
+				background: linear-gradient(162deg, $secondary 0%, $primary 100%);
+				box-shadow: 0 5px 10px 0 rgba(70, 52, 52, 0.4);
+				transition: transform 4000ms;
+				transition: 0.2s ease-in-out;
+
+				button:hover {
+					background: linear-gradient(165deg, $secondary 20%, $primary 100%);
+					transform: scale(1 25);
+				}
+			}
+		}
+		/*footer*/
+		footer {
+			background-color: rgb(58, 57, 57);
+			padding-top: 0.5rem;
+			padding-bottom: 1rem;
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin-left: 1rem;
+			}
+
+			&li {
+				color: #fff;
+				text-decoration: none;
+				font-weight: 400;
+				line-height: 1.7rem;
+			}
+			&.cherche {
+				font-weight: 400;
+			}
+
+			&.fine {
+				font-weight: 300;
+			}
+
+			&.finecontact {
+				line-height: none;
+			}
+
+			i {
+				color: #fff;
+				margin-right: 8px;
+				font-size: 12px;
+			}
+		}
+	}
+}
